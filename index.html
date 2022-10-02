@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tabela.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container" style="border: 1px solid red;">
+        <div class="div1" style="border: 1px solid rgb(55, 0, 255);">
+            <input type="text" id="prvi" placeholder="Order number"><br>
+            <input type="text" id="drugi" placeholder="Sender"><br>
+            <input type="text" id="treci" placeholder="Place of loading"><br>
+            <input type="text" id="cetvrti" placeholder="Date of loading"><br>
+            <input type="text" id="peti" placeholder="Loading contact"><br>
+            <input type="text" id="sesti" placeholder="Number of paletts"><br>
+            <input type="text" id="sedmi" placeholder="Num. of the pallet space">
+        </div>
+        <div class="div2" style="border: 1px solid red;">
+            <input type="text" id="osmi" placeholder="Goods"><br>
+            <input type="text" id="deveti" placeholder="Carrier"><br>
+            <div>
+                <p type="text" id="deseti">Zone </p><select name="zone" id="zone" class="zone" onchange="zona()">
+                <option value="011 " class="011">011</option>
+                <option value="022 " class="022">022</option>
+                <option value="015 ">015</option>
+                <option value="013 ">013</option>
+              </select>
+            </div><br>
+            <input type="text" id=" " placeholder="Unesi naziv"><br>
+        </div>
+        <button class="btn">Unesi</button>
+        <input id="searchbar" class="searchbar" onkeyup="search()" type="text" name="search" placeholder="Search ..">
+    </div>
+
+    <table id="tabla" class="tabla">
+        <tr class="row" id="row">
+            <th>Order number</th>
+            <th>Sender</th>
+            <th>Place of loading</th>
+            <th>Date of loading</th>
+            <th>Loading contact</th>
+            <th>Number of paletts</th>
+            <th>Num. of the pallet space</th>
+            <th>Goods</th>
+            <th>Carrier</th>
+            <th>Zone</th>
+            <th class="time">Time</th>
+        </tr>
+    </table>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Prevozni list</p>
+            <p id="text"></p>
+            <p id="text1"></p>
+            <p id="text2"></p>
+            <i class="fa fa-print" aria-hidden="true" value="Print" onclick="window.print()"></i>
+        </div>
+    </div>
+
+
+    <script src="tabela.js"></script>
+    <!--  <script src="ajax.js"></script> -->
+</body>
+
+</html>
